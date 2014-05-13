@@ -32,6 +32,6 @@ class VagrantPlugins::Salt::Provisioner
       @config.grains_data[key.to_s] = @config.grains_data.delete(key)
     end
 
-    {'grains' => @config.grains_data}
+    @config.grains_data
   end
 end
